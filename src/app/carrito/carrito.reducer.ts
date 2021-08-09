@@ -18,17 +18,6 @@ export function CarritoReducer(state: ProductCart[] = initialState, incomingActi
             return [];
         // Update
         case CarritoActionTypes.UPDATE_ITEM:
-            // state.map(modifyProduct => {
-            //     if (modifyProduct === action.payload) {
-            //         return [modifyProduct, action.payload];
-            //     }
-            //     else return
-            // });
-            // return state;
-            // const navGroups = state.allNavGroups.map(g => ({ ...g }));
-            // const navGroup = navGroups.find(g => g.groupId === group.groupId);
-            // navGroup.collapsed = !navGroup.collapsed;
-            // return { ...state, allNavGroups: navGroups };
             const newState = state.map(g => ({ ...g }));
             const newProduct = newState.find(g => g.product_id === action.payload.product_id);
             if (newProduct) {
