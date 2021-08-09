@@ -1,0 +1,12 @@
+<nz-card style="width:100%;" [nzActions]="[addCart]">
+    <nz-card-meta nzTitle={{producto.nombre}} [nzDescription]=descripcion>
+        <ng-template #descripcion>
+            ID: {{producto.id}} <br>
+            {{producto.descripcion}} <br>
+            SKU: {{producto.sku}}<br>
+        </ng-template>
+    </nz-card-meta>
+    <ng-template #addCart>
+        <i nz-icon nzType="plus" (click)="agregarCarrito(producto)"></i>
+    </ng-template>
+</nz-card>

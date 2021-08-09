@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tul-carrito": {
+      "hosting": {
+        "tul-carrito": [
+          "tul-carrito"
+        ]
+      }
+    }
+  }
+}

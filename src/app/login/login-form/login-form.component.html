@@ -1,0 +1,39 @@
+<nz-layout class="layout">
+    <nz-header>
+        <h1 class="titulo">Bienvenido</h1>
+    </nz-header>
+    <nz-content>
+        <nz-breadcrumb>
+            <br>
+        </nz-breadcrumb>
+        <div class="inner-content">
+            <div nz-col nzSpan="16" nzOffset='8' nzJustify="space-around" nzAlign="middle" class="mt-4">
+                <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+                    <nz-form-item>
+                        <nz-form-control nzErrorTip="Ingresá un email válido">
+                            <nz-input-group nzPrefixIcon="user">
+                                <input type="email" nz-input formControlName="email" placeholder="Email" />
+                            </nz-input-group>
+                        </nz-form-control>
+                    </nz-form-item>
+                    <nz-form-item>
+                        <nz-form-control nzErrorTip="Please input your Password!">
+                            <nz-input-group nzPrefixIcon="lock">
+                                <input type="password" nz-input formControlName="password" placeholder="Password" />
+                            </nz-input-group>
+                        </nz-form-control>
+                    </nz-form-item>
+                    <div nz-row class="login-form-margin">
+
+                    </div>
+                    <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Ingresar</button>
+         
+                </form>
+            </div>
+        </div>
+
+    </nz-content>
+    <nz-footer>
+
+    </nz-footer>
+</nz-layout>

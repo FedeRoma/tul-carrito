@@ -1,0 +1,6 @@
+<nz-divider nzOrientation="left" nzText="Productos"></nz-divider>
+<div nz-row [nzGutter]="16">
+    <div *ngFor="let producto of listproductos" nz-col class="gutter-row" [nzSpan]="6" style="margin: 30px;">
+        <app-product [producto]="producto"></app-product>
+    </div>
+</div>

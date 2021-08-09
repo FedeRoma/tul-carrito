@@ -1,0 +1,7 @@
+<ul nz-menu nzTheme="dark" nzMode="horizontal">
+    <span class="tituloNav" [routerLink]="['/home']">TÜL-Carrito</span>
+    <li nz-menu-item [routerLink]="['/home/products']">Productos</li>
+    <li nz-menu-item [routerLink]="['/home/checkout']">
+        <button nz-button nzType="primary" nzShape="circle"><i nz-icon nzType="shopping-cart"></i><b>{{(cantidadItems | async)}}</b></button>
+    </li>
+</ul>

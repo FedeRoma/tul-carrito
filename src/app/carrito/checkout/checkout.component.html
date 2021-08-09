@@ -1,0 +1,26 @@
+<nz-content>
+    <nz-table #basicTable>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of itemsCarrito$ | async">
+                <td>{{ data.product_id }}</td>
+                <td>{{ data.product.nombre }}</td>
+                <td>{{ data.quantity }}</td>
+                <td>
+                    <a><i nz-icon nzType="plus" nzTheme="outline" (click)="agregoItem(data)"></i> {{ data.quantity }} <i nz-icon nzType="minus" nzTheme="outline" (click)="sacoItem(data)"></i></a>
+                    <nz-divider nzType="vertical"></nz-divider>
+                    <a (click)="deleteItem(data.product_id)">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </nz-table>
+
+    <button nz-button nzType="primary" (click)="guardarOrden()">Guardar Orden</button>
+</nz-content>
